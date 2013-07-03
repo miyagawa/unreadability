@@ -9,6 +9,6 @@ get '/:username/:type' do
     headers['Content-Type'] = 'application/rss+xml'
     response.body.gsub %r[http://www.readability.com/read\?url=], ''
   else
-    response.code
+    response.code.to_i
   end
 end
